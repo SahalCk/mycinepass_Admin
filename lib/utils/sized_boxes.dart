@@ -1,0 +1,21 @@
+import 'package:flutter/material.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
+
+SizedBox sizedBoxHeight10 = SizedBox(height: Adaptive.h(1));
+SizedBox sizedBoxHeight20 = SizedBox(height: Adaptive.h(2));
+SizedBox sizedBoxHeight25 = SizedBox(height: Adaptive.h(2.5));
+SizedBox sizedBoxHeight30 = SizedBox(height: Adaptive.h(3));
+SizedBox sizedBoxHeight40 = SizedBox(height: Adaptive.h(4));
+SizedBox sizedBoxHeight50 = SizedBox(height: Adaptive.h(5));
+SizedBox sizedBoxHeight60 = SizedBox(height: Adaptive.h(6));
+SizedBox sizedBoxHeight70 = SizedBox(height: Adaptive.h(7));
+SizedBox sizedBoxHeight80 = SizedBox(height: Adaptive.h(8));
+SizedBox sizedBoxHeight90 = SizedBox(height: Adaptive.h(9));
+SizedBox sizedBoxHeight100 = SizedBox(height: Adaptive.h(10));
+SizedBox sizedBoxHeight110 = SizedBox(height: Adaptive.h(11));
+SizedBox sizedBoxHeight120 = SizedBox(height: Adaptive.h(12));
+SizedBox sizedBoxWidth10 = SizedBox(height: Adaptive.w(10));
+SizedBox sizedBoxWidth20 = SizedBox(height: Adaptive.w(2));
+SizedBox sizedBoxWidth30 = SizedBox(height: Adaptive.w(3));
+SizedBox sizedBoxWidth40 = SizedBox(height: Adaptive.w(4));
+SizedBox sizedBoxWidth50 = SizedBox(height: Adaptive.w(5));
