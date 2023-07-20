@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "41341744618",
+    "project_id": "my-cinepass",
+    "storage_bucket": "my-cinepass.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41341744618:android:38663f4594daae2378ee93",
+        "android_client_info": {
+          "package_name": "com.example.cinepass_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "41341744618-c42smfd6nu9on9a0qk8sg32mt9uf3p33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWfcKJye7nyyMh42cvJ6l7DiZQYcaWae4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "41341744618-c42smfd6nu9on9a0qk8sg32mt9uf3p33.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

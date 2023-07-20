@@ -19,7 +19,7 @@ class AdminLoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final loginProvider =
-        Provider.of<LoginScreenProvider>(context, listen: false);
+        Provider.of<LoginScreenController>(context, listen: false);
     return Scaffold(
       body: SafeArea(
         child: Padding(

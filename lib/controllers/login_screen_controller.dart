@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class LoginScreenProvider extends ChangeNotifier {
+class LoginScreenController extends ChangeNotifier {
   bool obscureValue = true;
 
   void changeObscure() {

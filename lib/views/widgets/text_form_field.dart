@@ -76,9 +76,9 @@ class CinePassPasswordTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final passwordObscureController =
-        Provider.of<LoginScreenProvider>(context, listen: false);
+        Provider.of<LoginScreenController>(context, listen: false);
 
-    return Consumer<LoginScreenProvider>(
+    return Consumer<LoginScreenController>(
       builder: (context, value, child) {
         return TextFormField(
           controller: passwordController,
