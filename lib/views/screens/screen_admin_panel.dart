@@ -1,5 +1,6 @@
 import 'package:cinepass_admin/utils/sized_boxes.dart';
 import 'package:cinepass_admin/views/screens/banner_section/screen_manage_banners.dart';
+import 'package:cinepass_admin/views/screens/movies_section/screen_manage_movies.dart';
 import 'package:cinepass_admin/views/widgets/admin_panel_option_button.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -55,7 +56,7 @@ class AdminPanelScreen extends StatelessWidget {
                 const AdminPanelOptionButton(
                     optionName: 'Manage Movies',
                     image: 'assets/admin_panel/manage_movies.png',
-                    navigateTo: AdminPanelScreen()),
+                    navigateTo: ManageMoviesScreen()),
                 sizedBoxHeight25,
                 const AdminPanelOptionButton(
                     optionName: 'Manage Users',

@@ -1,9 +1,10 @@
 import 'package:cinepass_admin/controllers/login_screen_controller.dart';
 import 'package:cinepass_admin/controllers/manage_banner_controller.dart';
+import 'package:cinepass_admin/controllers/manage_movies_controller.dart';
 import 'package:cinepass_admin/controllers/splash_screen_controller.dart';
 import 'package:cinepass_admin/firebase_options.dart';
 import 'package:cinepass_admin/utils/colors.dart';
-import 'package:cinepass_admin/views/screens/banner_section/screen_manage_banners.dart';
+import 'package:cinepass_admin/views/screens/movies_section/screen_manage_movies.dart';
 import 'package:cinepass_admin/views/screens/screen_splash.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -32,7 +33,9 @@ class MyApp extends StatelessWidget {
             ChangeNotifierProvider(
                 create: (context) => LoginScreenController()),
             ChangeNotifierProvider(
-                create: (context) => ManageBannerController())
+                create: (context) => ManageBannerController()),
+            ChangeNotifierProvider(
+                create: (context) => ManageMoviesController())
           ],
           child: MaterialApp(
             debugShowCheckedModeBanner: false,

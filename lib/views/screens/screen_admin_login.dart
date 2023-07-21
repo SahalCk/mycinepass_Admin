@@ -4,7 +4,7 @@ import 'package:cinepass_admin/utils/text_styles.dart';
 import 'package:cinepass_admin/views/widgets/cine_pass_button.dart';
 import 'package:cinepass_admin/views/widgets/cine_pass_loading.dart';
 import 'package:cinepass_admin/views/widgets/cine_pass_logo.dart';
-import 'package:cinepass_admin/views/widgets/text_form_field.dart';
+import 'package:cinepass_admin/views/widgets/cine_pass_text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';

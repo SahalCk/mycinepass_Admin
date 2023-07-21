@@ -9,7 +9,7 @@ import 'package:cinepass_admin/views/widgets/cine_pass_appbar.dart';
 import 'package:cinepass_admin/views/widgets/cine_pass_button.dart';
 import 'package:cinepass_admin/views/widgets/cine_pass_loading.dart';
 import 'package:cinepass_admin/views/widgets/cine_pass_snack_bars.dart';
-import 'package:cinepass_admin/views/widgets/text_form_field.dart';
+import 'package:cinepass_admin/views/widgets/cine_pass_text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';

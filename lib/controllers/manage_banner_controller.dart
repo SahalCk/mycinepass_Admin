@@ -1,6 +1,4 @@
-import 'dart:developer';
 import 'dart:typed_data';
-
 import 'package:cinepass_admin/models/movie_banner_model.dart';
 import 'package:cinepass_admin/views/widgets/cine_pass_snack_bars.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
