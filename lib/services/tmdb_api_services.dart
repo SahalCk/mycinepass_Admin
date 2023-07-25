@@ -1,4 +1,4 @@
-import 'package:cinepass_admin/services/tmdb_api_key.dart';
+import 'package:cinepass_admin/services/api_keys.dart';
 import 'package:http/http.dart';
 
 class TMDBAPIServices {

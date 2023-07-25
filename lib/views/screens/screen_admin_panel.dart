@@ -1,6 +1,9 @@
 import 'package:cinepass_admin/utils/sized_boxes.dart';
 import 'package:cinepass_admin/views/screens/banner_section/screen_manage_banners.dart';
+import 'package:cinepass_admin/views/screens/bookings_section/screen_view_bookings.dart';
 import 'package:cinepass_admin/views/screens/movies_section/screen_manage_movies.dart';
+import 'package:cinepass_admin/views/screens/owners_section/screen_manage_owners.dart';
+import 'package:cinepass_admin/views/screens/users_section/screen_manage_users.dart';
 import 'package:cinepass_admin/views/widgets/admin_panel_option_button.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -61,17 +64,17 @@ class AdminPanelScreen extends StatelessWidget {
                 const AdminPanelOptionButton(
                     optionName: 'Manage Users',
                     image: 'assets/admin_panel/manage_users.png',
-                    navigateTo: AdminPanelScreen()),
+                    navigateTo: ManageUsersScreen()),
                 sizedBoxHeight25,
                 const AdminPanelOptionButton(
                     optionName: 'Manage Owners',
                     image: 'assets/admin_panel/manage_owners.png',
-                    navigateTo: AdminPanelScreen()),
+                    navigateTo: ManageOwnersScreen()),
                 sizedBoxHeight25,
                 const AdminPanelOptionButton(
                     optionName: 'View Bookings',
                     image: 'assets/admin_panel/view_bookings.png',
-                    navigateTo: AdminPanelScreen()),
+                    navigateTo: ViewBookingsScreen()),
                 sizedBoxHeight25,
                 const AdminPanelOptionButton(
                     optionName: 'Manage Coupons',
