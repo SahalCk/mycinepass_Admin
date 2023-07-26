@@ -12,6 +12,7 @@ class CinePassTextFormField extends StatelessWidget {
   final bool? isDigitsOnly;
   final int? limit;
   final bool? isLast;
+  final Function()? function;
   final TextEditingController controller;
 
   const CinePassTextFormField(
@@ -22,10 +23,19 @@ class CinePassTextFormField extends StatelessWidget {
       this.isDigitsOnly,
       this.limit,
       this.isLast,
+      this.function,
       required this.controller});
 
   @override
   Widget build(BuildContext context) {
+    TextInputType textInputType = TextInputType.text;
+    if (function != null) {
+      textInputType = TextInputType.none;
+    } else {
+      if (isDigitsOnly == true) {
+        textInputType = TextInputType.number;
+      }
+    }
     return TextFormField(
       controller: controller,
       maxLines: 1,
@@ -36,8 +46,8 @@ class CinePassTextFormField extends StatelessWidget {
         return null;
       },
       inputFormatters: [LengthLimitingTextInputFormatter(limit)],
-      keyboardType:
-          isDigitsOnly == true ? TextInputType.number : TextInputType.text,
+      keyboardType: textInputType,
+      onTap: function,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
           contentPadding: EdgeInsets.symmetric(vertical: Adaptive.h(2)),

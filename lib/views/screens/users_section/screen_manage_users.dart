@@ -2,7 +2,6 @@ import 'package:cinepass_admin/controllers/manage_users_controller.dart';
 import 'package:cinepass_admin/utils/colors.dart';
 import 'package:cinepass_admin/utils/sized_boxes.dart';
 import 'package:cinepass_admin/views/widgets/cine_pass_appbar.dart';
-import 'package:cinepass_admin/views/widgets/cine_pass_loading.dart';
 import 'package:cinepass_admin/views/widgets/cine_pass_search_field.dart';
 import 'package:cinepass_admin/views/widgets/cine_pass_user_card.dart';
 import 'package:flutter/material.dart';

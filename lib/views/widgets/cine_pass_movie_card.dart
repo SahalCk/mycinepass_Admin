@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:cinepass_admin/controllers/manage_movies_controller.dart';
 import 'package:cinepass_admin/utils/colors.dart';
 import 'package:cinepass_admin/utils/sized_boxes.dart';

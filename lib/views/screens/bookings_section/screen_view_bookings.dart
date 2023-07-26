@@ -1,12 +1,11 @@
 // ignore_for_file: use_build_context_synchronously
 
-import 'dart:developer';
-
 import 'package:cinepass_admin/controllers/view_bookings_controller.dart';
 import 'package:cinepass_admin/utils/colors.dart';
 import 'package:cinepass_admin/utils/sized_boxes.dart';
 import 'package:cinepass_admin/views/widgets/cine_pass_appbar.dart';
 import 'package:cinepass_admin/views/widgets/cine_pass_booking.dart';
+import 'package:cinepass_admin/views/widgets/cine_pass_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -24,8 +23,22 @@ class ViewBookingsScreen extends StatelessWidget {
       value:
           SystemUiOverlayStyle.light.copyWith(statusBarColor: backgroundColor),
       child: Scaffold(
-        appBar: CinePassAppBar()
-            .cinePassAppBar(context: context, title: 'View Bookings'),
+        appBar: CinePassAppBar().cinePassAppBar(
+          context: context,
+          title: 'View Bookings',
+          trailingIcon:
+              const Icon(Icons.download_rounded, color: Colors.white, size: 28),
+          trailingFunction: () async {
+            showDialog(
+              barrierDismissible: false,
+              context: context,
+              builder: (context) {
+                return const CinePassLoading();
+              },
+            );
+            await bookingsController.generateExcel(context);
+          },
+        ),
         body: Padding(
             padding: EdgeInsets.symmetric(horizontal: Adaptive.w(4)),
             child: Column(
@@ -68,7 +81,6 @@ class ViewBookingsScreen extends StatelessWidget {
                                         BorderSide(color: textFormFieldColor)),
                                 hintText: 'From Date'),
                             onTap: () async {
-                              log('message');
                               DateTime currentDate = DateTime.now();
                               final fromDate = await showDatePicker(
                                   initialDate: DateTime.now(),
@@ -181,15 +193,20 @@ class ViewBookingsScreen extends StatelessWidget {
                               );
                             }
                           } else {
-                            return const Expanded(
-                                child:
-                                    Center(child: CircularProgressIndicator()));
+                            return Expanded(
+                                child: Center(
+                              child: CircularProgressIndicator(
+                                  backgroundColor:
+                                      const Color.fromARGB(255, 207, 234, 255),
+                                  color: primaryColor,
+                                  strokeWidth: 6),
+                            ));
                           }
                         },
                       );
                     } else {
+                      bookingsController.setSortedList();
                       if (value.sortedList.isNotEmpty) {
-                        bookingsController.setSortedList();
                         return Expanded(
                             child: ListView.separated(
                                 padding: EdgeInsets.only(top: Adaptive.h(1)),

@@ -1,8 +1,10 @@
 import 'package:cinepass_admin/controllers/login_screen_controller.dart';
 import 'package:cinepass_admin/controllers/manage_banner_controller.dart';
+import 'package:cinepass_admin/controllers/manage_coupons_controller.dart';
 import 'package:cinepass_admin/controllers/manage_movies_controller.dart';
 import 'package:cinepass_admin/controllers/manage_owners_controller.dart';
 import 'package:cinepass_admin/controllers/manage_users_controller.dart';
+import 'package:cinepass_admin/controllers/view_revenue_controller.dart';
 import 'package:cinepass_admin/controllers/splash_screen_controller.dart';
 import 'package:cinepass_admin/controllers/view_bookings_controller.dart';
 import 'package:cinepass_admin/firebase_options.dart';
@@ -43,7 +45,11 @@ class MyApp extends StatelessWidget {
             ChangeNotifierProvider(
                 create: (context) => ManageOwnersController()),
             ChangeNotifierProvider(
-                create: (context) => ViewBookingsController())
+                create: (context) => ViewBookingsController()),
+            ChangeNotifierProvider(
+                create: (context) => ViewRevenueController()),
+            ChangeNotifierProvider(
+                create: (context) => ManageCouponsController())
           ],
           child: MaterialApp(
             debugShowCheckedModeBanner: false,

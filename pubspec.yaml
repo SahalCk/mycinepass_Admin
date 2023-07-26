@@ -47,7 +47,11 @@ dependencies:
   firebase_core: ^2.15.0
   firebase_storage: ^11.2.5
   cloud_firestore: ^4.8.3
-  onesignal_flutter: ^3.5.1
+  glassmorphism: ^3.0.0
+  fl_chart: ^0.63.0
+  syncfusion_flutter_xlsio: ^22.1.39
+  open_file: ^3.3.2
+  path_provider: ^2.0.15
 
 dev_dependencies:
   flutter_test:

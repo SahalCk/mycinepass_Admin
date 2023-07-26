@@ -2,7 +2,7 @@ import 'package:cinepass_admin/controllers/manage_owners_controller.dart';
 import 'package:cinepass_admin/utils/colors.dart';
 import 'package:cinepass_admin/utils/sized_boxes.dart';
 import 'package:cinepass_admin/views/screens/owners_section/screen_verify_owners.dart';
-import 'package:cinepass_admin/views/widgets/cine_pas_owner_card.dart';
+import 'package:cinepass_admin/views/widgets/cine_pass_owner_card.dart';
 import 'package:cinepass_admin/views/widgets/cine_pass_appbar.dart';
 import 'package:cinepass_admin/views/widgets/cine_pass_search_field.dart';
 import 'package:flutter/material.dart';
@@ -50,6 +50,7 @@ class ManageOwnersScreen extends StatelessWidget {
                                     EdgeInsets.only(bottom: Adaptive.h(1.5)),
                                 itemBuilder: (context, index) {
                                   return InkWell(
+                                    borderRadius: BorderRadius.circular(12),
                                     onTap: () {
                                       Navigator.of(context).push(
                                           MaterialPageRoute(
@@ -86,7 +87,13 @@ class ManageOwnersScreen extends StatelessWidget {
                                   return sizedBoxHeight10;
                                 },
                                 itemCount: value.searchedOwnerList.length)
-                            : const Center(child: CircularProgressIndicator());
+                            : Center(
+                                child: CircularProgressIndicator(
+                                    backgroundColor: const Color.fromARGB(
+                                        255, 207, 234, 255),
+                                    color: primaryColor,
+                                    strokeWidth: 6),
+                              );
                       },
                     ),
                   )

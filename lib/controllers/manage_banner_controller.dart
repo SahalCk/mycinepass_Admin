@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:typed_data';
 import 'package:cinepass_admin/models/movie_banner_model.dart';
 import 'package:cinepass_admin/views/widgets/cine_pass_snack_bars.dart';
@@ -73,11 +75,12 @@ class ManageBannerController extends ChangeNotifier {
   Future<void> deleteData(BuildContext context, int index) async {
     try {
       final id = snapShotList![index].id;
-      Navigator.of(context).pop();
+
       await FirebaseFirestore.instance
           .collection('movieBannerDetails')
           .doc(id)
           .delete();
+      Navigator.of(context).pop();
       successSnackBar(context, 'Successfully deleted Movie Banner');
     } catch (e) {
       errorSnackBar(context, e.toString());

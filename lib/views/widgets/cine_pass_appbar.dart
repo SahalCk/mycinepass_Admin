@@ -33,10 +33,7 @@ class CinePassAppBar {
                         width: Adaptive.w(8),
                       )
                     : IconButton(
-                        onPressed: () {
-                          trailingFunction;
-                        },
-                        icon: trailingIcon),
+                        onPressed: trailingFunction, icon: trailingIcon),
               ],
             ),
           ),
