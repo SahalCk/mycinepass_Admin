@@ -39,15 +39,15 @@ class AddNewBannerScreen extends StatelessWidget {
               child: Column(
                 children: [
                   sizedBoxHeight40,
-                  Consumer<ManageBannerController>(
-                    builder: (context, value, child) {
-                      return InkWell(
-                        onTap: () {
-                          Provider.of<ManageBannerController>(context,
-                                  listen: false)
-                              .uploadBannerImage(context);
-                        },
-                        child: Container(
+                  InkWell(
+                    onTap: () async {
+                      await Provider.of<ManageBannerController>(context,
+                              listen: false)
+                          .uploadBannerImage(context);
+                    },
+                    child: Consumer<ManageBannerController>(
+                      builder: (context, value, child) {
+                        return Container(
                             height: Adaptive.h(30),
                             width: Adaptive.w(100),
                             decoration: BoxDecoration(
@@ -71,9 +71,9 @@ class AddNewBannerScreen extends StatelessWidget {
                                       const Text("Tap to Upload Banner Image*",
                                           style: TextStyle(color: Colors.white))
                                     ],
-                                  )),
-                      );
-                    },
+                                  ));
+                      },
+                    ),
                   ),
                   sizedBoxHeight20,
                   CinePassTextFormField(

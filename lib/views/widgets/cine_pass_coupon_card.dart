@@ -11,7 +11,7 @@ class CinePassCouponCard extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(Adaptive.w(3.5)),
       width: Adaptive.w(100),
-      height: Adaptive.h(9.5),
+      height: Adaptive.h(9.95),
       decoration: BoxDecoration(
           color: const Color.fromRGBO(84, 168, 229, 0.1),
           borderRadius: BorderRadius.circular(12)),

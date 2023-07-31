@@ -78,7 +78,7 @@ class CinePassMoviecard extends StatelessWidget {
                   style: const TextStyle(color: Colors.blue, fontSize: 16)),
               SizedBox(
                 width: Adaptive.w(55),
-                child: Text(movieReleaseDate,
+                child: Text(movieReleaseDate.substring(0, 10),
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(color: Colors.white, fontSize: 16)),
               ),

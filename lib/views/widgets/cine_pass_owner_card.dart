@@ -30,7 +30,7 @@ class CinePassOwnerCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(Adaptive.h(1.3)),
-      height: Adaptive.h(18.2),
+      height: Adaptive.h(19.375),
       width: Adaptive.w(100),
       decoration: BoxDecoration(
           color: const Color.fromRGBO(84, 168, 229, 0.1),

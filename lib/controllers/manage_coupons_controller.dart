@@ -46,7 +46,6 @@ class ManageCouponsController extends ChangeNotifier {
           item['minimumAmountToApply']);
       allCoupons.add(model);
     }
-    notifyListeners();
   }
 
   Future<void> addNewCoupon(

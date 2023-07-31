@@ -457,7 +457,10 @@ class ViewRevenueScreen extends StatelessWidget {
                               child: const Text('Manage Transactions'))
                         ]);
                       } else {
-                        return const Center(child: Text('No data found'));
+                        return const Center(
+                            child: Text('No data found',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 16)));
                       }
                     } else {
                       return Center(

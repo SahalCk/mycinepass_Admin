@@ -17,6 +17,7 @@ class CinePassBookingCard extends StatelessWidget {
   Widget build(BuildContext context) {
     log(movieBookingModel.selectedSeats[0].id);
     return InkWell(
+      borderRadius: BorderRadius.circular(12),
       onTap: () {
         showDialog(
           context: context,
@@ -32,7 +33,7 @@ class CinePassBookingCard extends StatelessWidget {
                 Text(movieBookingModel.userName,
                     style: TextStyle(color: Colors.blue[700], fontSize: 19)),
                 sizedBoxHeight10,
-                const Text('----------------------------',
+                const Text('---------------------------',
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.white, fontSize: 18)),
                 sizedBoxHeight10,
@@ -150,7 +151,7 @@ class CinePassBookingCard extends StatelessWidget {
       },
       child: Container(
         padding: EdgeInsets.all(Adaptive.h(1.3)),
-        height: Adaptive.h(13.5),
+        height: Adaptive.h(14.38),
         width: Adaptive.w(100),
         decoration: BoxDecoration(
             color: const Color.fromRGBO(84, 168, 229, 0.1),

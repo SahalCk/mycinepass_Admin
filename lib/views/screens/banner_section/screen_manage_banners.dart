@@ -34,37 +34,35 @@ class ManageBannersScreen extends StatelessWidget {
                 if (snapshot.connectionState == ConnectionState.done ||
                     snapshot.connectionState == ConnectionState.active) {
                   if (snapshot.hasData) {
-                    Provider.of<ManageBannerController>(context, listen: false)
-                        .addValueToList(snapshot);
-                    return Consumer<ManageBannerController>(
-                      builder: (context, value, child) {
-                        return value.bannerList.isNotEmpty
-                            ? ListView.separated(
-                                padding: EdgeInsets.only(top: Adaptive.h(1.2)),
-                                itemBuilder: (context, index) {
-                                  return CinePassBanner(
-                                    movieName:
-                                        value.bannerList[index].movieName,
-                                    movieDescription: value
-                                        .bannerList[index].movieDescription,
-                                    imgUrl:
-                                        value.bannerList[index].bannerImageUrl,
-                                    index: index,
-                                  );
-                                },
-                                separatorBuilder: (context, index) {
-                                  return sizedBoxHeight20;
-                                },
-                                itemCount: value.bannerList.length)
-                            : const Center(
-                                child: Text(
-                                  'Banners are not added!',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 16),
-                                ),
+                    final bannerController =
+                        Provider.of<ManageBannerController>(context,
+                            listen: false);
+                    bannerController.addValueToList(snapshot);
+                    return bannerController.bannerList.isNotEmpty
+                        ? ListView.separated(
+                            padding: EdgeInsets.only(top: Adaptive.h(1.2)),
+                            itemBuilder: (context, index) {
+                              return CinePassBanner(
+                                movieName: bannerController
+                                    .bannerList[index].movieName,
+                                movieDescription: bannerController
+                                    .bannerList[index].movieDescription,
+                                imgUrl: bannerController
+                                    .bannerList[index].bannerImageUrl,
+                                index: index,
                               );
-                      },
-                    );
+                            },
+                            separatorBuilder: (context, index) {
+                              return sizedBoxHeight20;
+                            },
+                            itemCount: bannerController.bannerList.length)
+                        : const Center(
+                            child: Text(
+                              'Banners are not added!',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 16),
+                            ),
+                          );
                   } else {
                     return const ScaffoldMessenger(
                         child: Text('Something went wrong'));
@@ -80,7 +78,6 @@ class ManageBannersScreen extends StatelessWidget {
                   builder: (context) => AddNewBannerScreen()));
             },
             text: 'Add New Banner'),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       ),
     );
   }

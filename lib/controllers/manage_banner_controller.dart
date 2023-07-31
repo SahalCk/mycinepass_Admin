@@ -106,7 +106,6 @@ class ManageBannerController extends ChangeNotifier {
           movieName: banner['movieName']);
       bannerList.add(bannerE);
     }
-    notifyListeners();
   }
 
   void makeNullandNotify() {

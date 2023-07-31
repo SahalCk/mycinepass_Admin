@@ -65,7 +65,7 @@ class ViewBookingsScreen extends StatelessWidget {
                             controller: fromDateController,
                             keyboardType: TextInputType.none,
                             style: const TextStyle(
-                                color: Colors.white, fontSize: 14),
+                                color: Colors.white, fontSize: 13),
                             decoration: InputDecoration(
                                 filled: true,
                                 fillColor: textFormFieldColor,
@@ -105,7 +105,7 @@ class ViewBookingsScreen extends StatelessWidget {
                             controller: toDateController,
                             keyboardType: TextInputType.none,
                             style: const TextStyle(
-                                color: Colors.white, fontSize: 14),
+                                color: Colors.white, fontSize: 13),
                             decoration: InputDecoration(
                                 filled: true,
                                 fillColor: textFormFieldColor,

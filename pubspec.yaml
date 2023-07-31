@@ -52,6 +52,7 @@ dependencies:
   syncfusion_flutter_xlsio: ^22.1.39
   open_file: ^3.3.2
   path_provider: ^2.0.15
+  connectivity_plus: ^4.0.1
 
 dev_dependencies:
   flutter_test:
